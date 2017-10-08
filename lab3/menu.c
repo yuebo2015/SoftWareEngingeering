@@ -31,7 +31,7 @@
 
 int main(int argc, char *argv[])
 {
-
+    system("clear");
 	char cmd[CMD_MAX_LEN];
 	tDataNode *p = head;
     printf( "******************************DESCRIPTION************************\n"
