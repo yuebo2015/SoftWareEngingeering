@@ -35,13 +35,7 @@ typedef struct LinkTableNode tLinkTableNode;
 /*
  * LinkTable Type
  */
-typedef struct LinkTable
-{
-    tLinkTableNode *pHead;
-    tLinkTableNode *pTail;
-    int			SumOfNode;
-    pthread_mutex_t mutex;
-}tLinkTable;
+typedef struct LinkTable tLinkTable;
 
 /*
  * Create a LinkTable
