@@ -14,5 +14,7 @@ int Version(int argc, char *argv[]);
 
 int Quit(int argc, char *argv[]);
 
+int Ls(int argc, char *argv[]);
+
 #define _TEST_H
 #endif
