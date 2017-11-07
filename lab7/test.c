@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	MenuConfig("version", "Display Version.", Version);
 	MenuConfig("quit", "Exit from main function.", Quit);
-	MenuConfig("ls", "List all files in current direction.", Ls);
+	MenuConfig("MyCMD", "self-cmd with argment.", MyCMD);
 	ExecuteMenu();
 	
     return 0;
@@ -28,15 +28,29 @@ int Quit(int argc, char *argv[])
     exit(0);
 }
 
-int Ls(int argc, char *argv[])
+int MyCMD(int argc, char *argv[])
 {
-    char cmd[256] = {0};
-    int loopi;
+	int ch;
 
-    for (loopi = 0; loopi < argc; loopi++)
-    {
-        strcat(cmd, argv[loopi]);
-        strcat(cmd, " ");
-    }
-    system(cmd);
+	while ((ch = getopt(argc, argv, "a:b:c:d:")) != -1)
+	{
+		switch (ch)
+		{
+			case 'a':
+				printf("%s \n", optarg);
+				break;
+			case 'b':
+				printf("%s \n", optarg);
+				break;
+			case 'c':
+				printf("%s \n", optarg);
+				break;
+			case 'd':
+				printf("%s \n", optarg);
+				break;
+			default:
+				printf("Wrong argments \n");
+				break;
+		}
+	}
 }

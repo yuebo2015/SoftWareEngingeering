@@ -14,7 +14,8 @@ int Version(int argc, char *argv[]);
 
 int Quit(int argc, char *argv[]);
 
-int Ls(int argc, char *argv[]);
+/* just print argment according to option */
+int MyCMD(int argc, char *argv[]);
 
 #define _TEST_H
 #endif
